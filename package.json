@@ -1,0 +1,29 @@
+{
+  "name": "contacts",
+  "version": "0.0.1",
+  "description": "a simple contacts management",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekplux/contacts.git"
+  },
+  "keywords": [
+    "contacts",
+    "management"
+  ],
+  "author": "GeekPlux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geekplux/contacts/issues"
+  },
+  "homepage": "https://github.com/geekplux/contacts#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
+}
