@@ -7,5 +7,17 @@ module.exports = {
   output: {
     path: path.resolve(root, 'build'),
     filename: 'script.js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        include: path.resolve(root, 'src'),
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
   }
 };

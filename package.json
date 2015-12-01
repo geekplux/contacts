@@ -22,9 +22,13 @@
   },
   "homepage": "https://github.com/geekplux/contacts#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "vue": "^1.0.10"
   },
   "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }

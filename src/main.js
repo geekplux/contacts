@@ -1,5 +1,8 @@
+import Vue from 'vue';
 
-new Vue({
+console.log(Vue);
+
+let app = new Vue({
   el: '#app',
   data: {
     text: 'new Contacts!'
