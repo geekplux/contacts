@@ -7,7 +7,7 @@ import contactsView from './components/contactsView.vue';
 
 Vue.use(Router);
 
-let router = new Router();
+const router = new Router();
 
 router.map({
   '/login': {
