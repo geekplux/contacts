@@ -4,6 +4,7 @@
   "description": "a simple contacts management",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
     "test": "test"
   },
   "repository": {
@@ -24,6 +25,7 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
