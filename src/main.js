@@ -1,10 +1,21 @@
 import Vue from 'vue';
+import Router from 'vue-router';
+import App from './components/App.vue';
+import loginView from './components/loginView.vue';
+import contactsView from './components/contactsView.vue';
 
-console.log(Vue);
 
-let app = new Vue({
-  el: '#app',
-  data: {
-    text: 'new Contacts!'
+Vue.use(Router);
+
+let router = new Router();
+
+router.map({
+  '/login': {
+    component: loginView
+  },
+  '/contacts': {
+    component: contactsView
   }
-});
+})
+
+router.start(App, '#app');

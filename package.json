@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack",
     "test": "test"
   },
   "repository": {
@@ -23,7 +24,8 @@
   "homepage": "https://github.com/geekplux/contacts#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "vue": "^1.0.10"
+    "vue": "^1.0.10",
+    "vue-router": "^0.7.7"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
