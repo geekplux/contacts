@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import App from './views/App.vue';
-import loginView from './views/login.vue';
+import authView from './views/auth.vue';
 import contactsView from './views/contacts.vue';
 import mdlCss from '../node_modules/material-design-lite/material.min.css';
 import mdl from '../node_modules/material-design-lite/material.min.js';
@@ -13,7 +13,7 @@ const router = new Router();
 
 router.map({
   '/login': {
-    component: loginView
+    component: authView
   },
   '/contacts': {
     component: contactsView
