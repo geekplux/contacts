@@ -61,4 +61,14 @@
    height: 48px;
    border-radius: 24px;
  }
+ .contacts-avatar-dropdown {
+   display: flex;
+   position: relative;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   flex-direction: row;
+   -webkit-box-align: center;
+   align-items: center;
+   width: 100%;
+ }
 </style>
