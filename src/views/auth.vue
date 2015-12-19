@@ -30,6 +30,7 @@
 <style lang="less">
  .container {
    background: url("../assets/images/background.jpg") no-repeat left center;
+   background-size: 100%;
  }
 
  .login-wrapper {
