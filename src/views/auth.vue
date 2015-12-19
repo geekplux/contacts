@@ -16,16 +16,38 @@
         </label>
       </div>
       <div class="btn-group">
-        <button class="btn btn-signup mdl-button mdl-js-button mdl-button--primary">
+        <button class="btn btn-signup mdl-button mdl-js-button mdl-button--primary" @click="signup">
           Signup
         </button>
-        <button class="btn btn-submit mdl-button mdl-js-button mdl-button--accent">
+        <button class="btn btn-submit mdl-button mdl-js-button mdl-button--accent" @click="login">
           OK
         </button>
       </div>
     </form>
   </div>
 </template>
+
+
+<script>
+
+ export default {
+   name: 'auth',
+
+   methods: {
+     signup: function () {
+       console.log('redirect to signup or replace login view');
+     },
+     login: function () {
+       this.redirect('contacts');
+     },
+     redirect: function (path) {
+       this.$route.router.go(path);
+     }
+   },
+
+ }
+</script>
+
 
 <style lang="less">
  .container {
