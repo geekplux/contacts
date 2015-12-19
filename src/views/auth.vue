@@ -1,21 +1,59 @@
 <template>
-  <div class="container">
+  <div class="container contacts-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
     <form class="login-wrapper">
-      <div class="input-wrapper">
-        <label for="userName">Username</label>
-        <input id="username" name="username" type="text" value=""/>
+      <div class="mdl-textfield mdl-js-textfield input-wrapper">
+        <input class="mdl-textfield__input" type="text" name="username" id="username">
+        <label class="mdl-textfield__label" for="username">Username</label>
       </div>
-      <div class="input-wrapper">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="text" value=""/>
+      <div class="mdl-textfield mdl-js-textfield input-wrapper">
+        <input class="mdl-textfield__input" type="password" name="password" id="password">
+        <label class="mdl-textfield__label" for="password">Password</label>
       </div>
-      <div class="input-wrapper">
-        <input id="agree" class="agree" name="agree" type="checkbox" value=""/> I agree term of this websit.
+      <div class="input-wrapper agree-wrapper">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+          <input type="checkbox" id="agree" class="mdl-checkbox__input" checked>
+          <span class="mdl-checkbox__label"> I agree term of this websit.</span>
+        </label>
       </div>
       <div class="btn-group">
-        <button type="" class="btn-signup">Signup</button>
-        <button type="submit" class="btn-submit">OK</button>
+        <button class="btn btn-signup mdl-button mdl-js-button mdl-button--primary">
+          Signup
+        </button>
+        <button class="btn btn-submit mdl-button mdl-js-button mdl-button--accent">
+          OK
+        </button>
       </div>
     </form>
   </div>
 </template>
+
+<style lang="less">
+ .container {
+   background: url("../assets/images/background.jpg") no-repeat left center;
+ }
+
+ .login-wrapper {
+   width: 300px;
+   margin: 200px auto;
+ }
+
+ .btn-group,
+ .agree-wrapper {
+   margin-top: 20px;
+ }
+
+ .btn-group {
+   .btn {
+     width: 100px;
+   }
+ }
+
+ .btn-signup {
+   float: left;
+   margin-left: 20px;
+ }
+ .btn-submit {
+   float: right;
+   margin-right: 20px;
+ }
+</style>
