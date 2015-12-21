@@ -2,11 +2,11 @@
   <div class="container contacts-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
     <form class="login-wrapper">
       <div class="mdl-textfield mdl-js-textfield input-wrapper">
-        <input class="mdl-textfield__input" type="text" name="username" id="username">
+        <input class="mdl-textfield__input" type="text" name="username" id="username" v-model="username">
         <label class="mdl-textfield__label" for="username">Username</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield input-wrapper">
-        <input class="mdl-textfield__input" type="password" name="password" id="password">
+        <input class="mdl-textfield__input" type="password" name="password" id="password" v-model="password">
         <label class="mdl-textfield__label" for="password">Password</label>
       </div>
       <div class="input-wrapper agree-wrapper">
@@ -33,13 +33,24 @@
  export default {
    name: 'auth',
 
+   data () {
+     return {
+       username: '',
+       password: ''
+     }
+   },
    methods: {
      signup: function () {
        console.log('redirect to signup or replace login view');
      },
      login: function () {
-       this.$http.post('/login').then(function (res) {
-         if (!res.data) return;
+       event.preventDefault();
+
+       this.$http.post('/login', {
+         username: this.username,
+         password: this.password
+       }).then(function (res) {
+         if (!res.data.userId) return;
          localStorage.setItem('userId', res.data.userId);
          this.redirect('contacts');
        });

@@ -31,6 +31,11 @@
 
    components: {
      Navbar
+   },
+
+   ready () {
+     const userId = localStorage.getItem('userId');
+     if (!userId) this.$route.router.go('login');
    }
  };
 
