@@ -38,7 +38,10 @@
        console.log('redirect to signup or replace login view');
      },
      login: function () {
-       this.redirect('contacts');
+       this.$http.post('/login').then(function (res) {
+         console.log(res);
+         this.redirect('contacts');
+       });
      },
      redirect: function (path) {
        this.$route.router.go(path);
