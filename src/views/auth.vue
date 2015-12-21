@@ -39,7 +39,8 @@
      },
      login: function () {
        this.$http.post('/login').then(function (res) {
-         console.log(res);
+         if (!res.data) return;
+         localStorage.setItem('userId', res.data.userId);
          this.redirect('contacts');
        });
      },

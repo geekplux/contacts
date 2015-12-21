@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build": "webpack",
+    "server": "node ./server/server.js",
     "test": "test"
   },
   "repository": {

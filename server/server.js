@@ -1,4 +1,5 @@
 var express = require('express');
+var loginData = require('./temp_data/login.json');
 
 var app = express();
 
@@ -11,7 +12,7 @@ app.all('/*', function(req, res, next) {
 
 
 app.use('/', function (req, res) {
-  res.send('Contacts');
+  res.send(loginData);
 });
 
 app.use('/login', function (req, res) {
