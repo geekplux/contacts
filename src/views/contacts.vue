@@ -50,7 +50,7 @@
      const userId = localStorage.getItem('userId');
      if (!userId) return this.$route.router.go('login');
 
-     this.$http.get('/contacts').then(function (res) {
+     this.$http.get('http://localhost:8000/contacts').then(function (res) {
        this.contacts = res.data;
      });
    }

@@ -34,8 +34,8 @@ router.redirect({
 
 router.start(App, '#app');
 
-Vue.http.options.beforeSend = function (req) {
-  req.url = 'http://localhost:8000' + req.url;
-};
+// Vue.http.options.beforeSend = function (req) {
+//   req.url = 'http://localhost:8000' + req.url;
+// };
 Vue.http.options.crossOrigin = true;
 Vue.http.options.emulateJSON = true;

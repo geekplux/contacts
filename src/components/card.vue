@@ -30,8 +30,9 @@
 
 
 <style lang="less">
- .contact-card.mdl-card {
-   height: 320px;
+ .contact-card {
+   height: 300px;
+   margin: 5px;
  }
 
  .contact-card {

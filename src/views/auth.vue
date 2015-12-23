@@ -46,7 +46,7 @@
      login: function () {
        event.preventDefault();
 
-       this.$http.post('/login', {
+       this.$http.post('http://localhost:8000/login', {
          username: this.username,
          password: this.password
        }).then(function (res) {
