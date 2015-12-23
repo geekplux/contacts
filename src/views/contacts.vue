@@ -21,7 +21,7 @@
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid cards-wrapper">
-        <card></card>
+        <card v-for="item in contacts"></card>
       </div>
     </main>
   </div>
@@ -40,9 +40,19 @@
      Card
    },
 
+   data () {
+     return {
+       contacts: []
+     }
+   },
+
    ready () {
      const userId = localStorage.getItem('userId');
-     if (!userId) this.$route.router.go('login');
+     if (!userId) return this.$route.router.go('login');
+
+     this.$http.get('/contacts').then(function (res) {
+       this.contacts = res.data;
+     });
    }
  };
 

@@ -1,7 +1,8 @@
 var express = require('express');
-var loginData = require('./temp_data/login.json');
 var bodyParser = require("body-parser");
 
+var loginData = require('./temp_data/login.json');
+var contacts = require('./temp_data/contacts.json');
 
 var app = express();
 
@@ -14,11 +15,18 @@ app.all('/*', function(req, res, next) {
   next();
 });
 
-app.route('/login')
-  .post(function (req, res) {
-    if (req.body.username && req.body.password)
-      res.send(loginData);
-  });
+app.post('/login', function (req, res) {
+  if (req.body.username && req.body.password)
+    res.send(loginData);
+});
+
+app.get('/contacts', function (req, res) {
+  var contactsList = [];
+  for (k in contacts) {
+    contactsList.push(contacts[k]);
+  }
+  res.send(contactsList);
+});
 
 app.use('/', function (req, res) {
   console.log('arrived');
