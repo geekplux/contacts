@@ -21,7 +21,7 @@
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid cards-wrapper">
-        <card v-for="item in contacts"></card>
+        <card v-for="item in contacts" :contact="item"></card>
       </div>
     </main>
   </div>

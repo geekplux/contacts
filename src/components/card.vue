@@ -1,10 +1,10 @@
 <template>
   <div class="contact-card mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">{{name}}</h2>
+      <h2 class="mdl-card__title-text">{{contact.name}}</h2>
     </div>
     <div class="mdl-card__supporting-text">
-      {{phone}}
+      {{contact.phone}}
     </div>
     <div class="mdl-card__actions mdl-card--border">
       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -19,11 +19,9 @@
  export default {
    name: 'Card',
 
-   data () {
-     return {
-       name: 'Gao Xiang',
-       phone: '23333333333'
-     }
+   props: ['contact'],
+   ready() {
+     console.log(this.contact);
    }
  }
 </script>
@@ -39,7 +37,7 @@
    .mdl-card__title {
      color: #fff;
      background:
-     url('../assets/images/contact-demo.png') bottom right 15% no-repeat #46B6AC;
+     url('../assets/images/contact-demo.jpg') bottom right 15% no-repeat #46B6AC;
      background-size: 100%;
 
      .mdl-card__title-text {
