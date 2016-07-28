@@ -22,8 +22,8 @@ npm run build
 
 ### Preview
 
-![](preview/Screen Shot 2015-12-24 at 11.42.30)
-![](preview/Screen Shot 2015-12-24 at 11.43.14)
+![](preview/Screen-Shot-2015-12-24-at-11.42.30.png)
+![](preview/Screen-Shot-2015-12-24-at-11.43.14.png)
 
 ### LICENSE
 
